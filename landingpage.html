@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevBattle Arena - Developer Showdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000, #1a1a1a, #007BFF);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .floating-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .floating-icons span {
+      position: absolute;
+      color: rgba(255, 255, 255, 0.05);
+      font-size: 3rem;
+      animation: float 30s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      position: relative;
+    }
+
+    header h1 {
+      color: white;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 80px 10%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      color: black;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+      z-index: 1;
+    }
+
+    .form-box input,
+    .form-box select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floating-icons">
+    <span style="left: 5%; animation-delay: 0s;">{ }</span>
+    <span style="left: 20%; animation-delay: 5s;">&lt;/&gt;</span>
+    <span style="left: 40%; animation-delay: 10s;">&#128187;</span>
+    <span style="left: 60%; animation-delay: 15s;">&lt;div&gt;</span>
+    <span style="left: 80%; animation-delay: 20s;">function()</span>
+  </div>
+
+  <header>
+    <h1>DevBattle Arena</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Service</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Join the Ultimate Developer Showdown</h2>
+    <p>Compete in global coding battles. Show your skills. Climb the leaderboard. Get discovered.</p>
+
+    <div class="form-box">
+      <form action="https://formsubmit.co/toluwaseovercomer@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="tech_stack" placeholder="Tech Stack (e.g. HTML, Python)" required />
+        <input type="text" name="telegram" placeholder="Telegram Username" required />
+        <select name="interest">
+          <option value="compete">I want to compete</option>
+          <option value="judge">I want to be a judge</option>
+          <option value="sponsor">I want to sponsor</option>
+        </select>
+        <button type="submit">Join Now</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="Social-links">
+    <a href="#">Facebook</a>
+    <a href="#">Telegram</a>
+    <a href="#">Twitter</a>
+    <a href="#">Intagram</a>
+    </div>
+    <p>&copy; 2025 DevBattle Arena. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
